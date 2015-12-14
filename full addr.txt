@@ -1,0 +1,49 @@
+<circuit>
+<output-point id=1 lable=S>
+	<input-source  type=gate id=9 />
+</output-point>
+<output-point id=2 lable=C>
+	<input-source type=gate id=8 />
+</output-point>
+<gate id=9 type=NAND>
+	<input-source type=gate id=6 />
+	<input-source type=gate id=7 />
+</gate>
+<gate id=8 type=NAND>
+	<input-source type=gate id=5 />
+	<input-source type=gate id=1 />
+</gate>
+<gate id=7 type=NAND>
+	<input-source type=gate id=5 />
+	<input-source type=input-point id=3 />
+</gate>
+<gate id=6 type=NAND>
+	<input-source type=gate id=4 />
+	<input-source type=gate id=5 />
+</gate>
+<gate id=5 type=NAND>
+	<input-source type=gate id=4 />
+	<input-source type=input-point id=3 />
+</gate>
+<gate id=4 type=NAND>
+	<input-source type=gate id=2 />
+	<input-source type=gate id=3 />
+</gate>
+<gate id=3 type=NAND>
+	<input-source type=gate id=1 />
+	<input-source type=input-point id=2 />
+</gate>
+<gate id=2 type=NAND>
+	<input-source type=gate id=1 />
+	<input-source type=input-point id=1 />
+</gate>
+<gate id=1 type=NAND>
+	<input-source type=input-point id=1 />
+	<input-source type=input-point id=2 />
+</gate>
+
+
+<input-point id=1 label=A/>
+<input-point id=2 label=B/>
+<input-point id=3 label=C/>
+</circuit>
